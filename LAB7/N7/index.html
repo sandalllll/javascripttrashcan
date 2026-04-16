@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N7</title>
+</head>
+<body>
+    <script src="script.js"></script>
+
+    <h1>Горизонтальная линия</h1>
+	<p>
+		Выберите значения параметров, которые требуется<br>изменить, и нажмите кнопку <strong>Выполнить</strong>.
+	</p>
+	
+	<div id="rect-align" style="margin: 0 auto; width: 100%;">
+		<div id="main-rect" style="width: 270px; height: 25px; background-color: black;"></div>
+	</div>
+	
+	<p style="line-height: 0.5;"></p>
+	<table border="1">
+		<tr>
+			<th align="left">
+				Выравнивание<br>
+				<input type="radio" name="alignment" value="100" checked>LEFT<br>
+				<input type="radio" name="alignment" value="50">CENTER<br>
+				<input type="radio" name="alignment" value="0">RIGHT<br>
+				<input type="number" id="height" value="25">толщина линии (size)<br>
+				<input type="number" id="width" value="270">длина линии (width)<br>
+			</th>
+			<th align="left">
+				Цвет линии<br>
+				<select id="rect-color">
+					<option value="black" selected>black</option>
+					<option value="gray">gray</option>
+					<option value="white">white</option>
+					<option value="red">red</option>
+					<option value="green">green</option>
+					<option value="blue">blue</option>
+					<option value="yellow">yellow</option>
+					<option value="lime">lime</option>
+					<option value="aqua">aqua</option>
+				</select>
+			</th>
+		</tr>
+	</table>
+	<p style="line-height: 0.5;"></p>
+	<button onclick="labMainFunction()">Вычислить</button>
+
+    <!--<p>
+	<p>
+		<pre><span>Январь:	</span><input type="text" id="i1" value="300"></pre>
+	</p>
+	<p>
+		<span>Средняя зарплата:</span><input readonly type="text" id="out">
+	</p>
+        <textarea readonly id="reach-output" rows="20" cols="50"></textarea>
+    </p>-->
+</body>
+</html>

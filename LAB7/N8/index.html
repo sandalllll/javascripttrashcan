@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N8</title>
+</head>
+<body>
+    <script src="script.js"></script>
+
+	<div id="pge0" style="text-align: center;">
+		<h1 style="font-size: 45px;">Бордо жалаповать в<br><span style="color: goldenrod;">Сервис</span>!</h1>
+		<p>Для продолжения нужно зарегестрироваться</p>
+		<div style="text-align: right; margin-right: 350px; line-height: 200px;">
+			<button onclick="B00Reg()">Регистрация</button>
+		</div>
+	</div>
+
+
+	<div hidden id="pge1" style="text-align: center;">
+		<div style="width: 275px; margin: 0 auto;">
+			<div class="meter" id="pge1meter" style="height: 5px; background-color: mediumpurple; width: 0%;"></div>
+		</div>
+		<p>Браузерные гномы собирают страницу...</p>
+	</div>
+
+	<div hidden id="pge2">
+		Шаг 1: Персональные данные
+		<table style="margin-left: auto; margin-right: auto;">
+			<tr>
+				<th align="left" style="vertical-align: top;">
+					Имя:<br>
+					<input type="text" id="pge2name" oninput="pge2Check()"><br>
+					Электронная почта:<br>
+					<input type="text" id="pge2email" oninput="pge2Check()"><br>
+					Страна:<br>
+					<input type="text" id="pge2state" oninput="pge2Check()"><br>
+					Пароль:<br>
+					<input type="password" id="pge2p1" oninput="pge2Check()"><br>
+					Повторите пароль:<br>
+					<input type="password" id="pge2p2" oninput="pge2Check()"><br>
+				</th>
+				<th align="left" style="vertical-align: top;">
+					Фамилия:<br><input type="text" id="pge2sname" oninput="pge2Check()"><br>
+					<div style="height: 39px;"></div>
+					Адрес:<br>
+					<input type="text" id="pge2address" oninput="pge2Check()"><br>
+				</th>
+			</tr>
+			<tr>
+				<th align="left" style="vertical-align: top;">
+				</th>
+				<th align="left" style="vertical-align: top;">
+					<button onclick="B02Can()">Отмена</button><button onclick="GoOffset(1)" id="pge2next" disabled>Далее</button>
+				</th>
+			</tr>
+		</table>
+	</div>
+
+	<div hidden id="pge3">
+		<p>Шаг 2: Телефонный номер</p>
+		<div style="justify-content: center; display: flex;">
+			<div style="place-items: left; align-items: left;">
+				В целях безопасности Сервису нужно подтверждение вашего<br>
+				Телефонного номера. На ваш номер будет отправлен 4-х значный код<br>
+				подтверждения<br>
+				<div style="height: 15px;"></div>
+				<input type="text" id="pge3phone" oninput="pge3Check()"><button disabled id="pge3send" onclick="document.getElementById('pge3bottom').hidden = false">Отправить</button><br>
+				<div style="height: 50px;"></div>
+				<span hidden id="pge3bottom">
+					Код подтверждения:<br>
+					<input type="text" id="pge3code" placeholder="XXXX" oninput="pge3Code()"><button onclick="B03Prover()">Проверить</button><br>
+					<div style="height: 50px;"></div>
+				</span>
+				<button onclick="GoOffset(-1)">Назад</button><button disabled id="pge3end" onclick="GoOffset(1)">Далее</button>
+			</div>
+		</div>
+	</div>
+
+	<div hidden id="pge4">
+		<p>Шаг 3: Метод оплаты</p>
+		<div style="justify-content: center; display: flex;">
+			<div style="place-items: left; align-items: left;">
+				Для совершения покупок в Сервисе необходимо подключить<br>
+				банковскую карту.<br>
+				<div style="height: 15px;"></div>
+				Номер карты<br>
+				<input type="text" id="pge4card1" placeholder="1111 2222 3333 4444" oninput="pge4Check()" oncopy="return false" onpaste="return false" oncut="return false"><br>
+				<table style="margin-left: auto; margin-right: auto;">
+					<tr>
+					<th align="left" style="vertical-align: top;">
+						Срок действия:<br>
+						<input type="text" id="pge4card2" placeholder="00/00" oninput="pge4Check()" oncopy="return false" onpaste="return false" oncut="return false"><br>
+					</th>
+					<th align="left" style="vertical-align: top;">
+						CVV:<br>
+						<input type="text" id="pge4card3" placeholder="XXX" oninput="pge4Check()" oncopy="return false" onpaste="return false" oncut="return false"><br>
+					</th>
+					</tr>
+				</table>
+				<input type="checkbox" id="pge4card4" onchange="pge4Check()"> Я согласен с любыми условиями, ничего не хочу читать, дайте мне уже<br>
+				пользоваться сервисом<br>
+				<button onclick="GoOffset(-1)">Назад</button><button disabled id="pge4end" onclick="GoOffset(1)">Далее</button>
+			</div>
+		</div>
+	</div>
+
+	<div hidden id="pge5" style="text-align: center;">
+		<h1 style="font-size: 45px;">Поздравляем!</h1>
+		<h2>Регистрация успешно завершена!</h2>
+		<p>Благодарим за использование нашего сервиса!</p>
+	</div>
+</body>
+</html>
