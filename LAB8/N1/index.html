@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1</title>
+</head>
+<body>
+    <script src="script.js"></script>
+
+    <div id="entrnace" style="text-align: center;">
+        <span id="mainRepl1">Добро пажаловать, странник!</span><br>
+        <span id="mainRepl2">Я буду звать тебя </span><span id="name-disp">********</span><span id="mainRepl3">, ок?</span><br>
+        <button id="con1B" disabled onclick="con1()">Ладно...</button><button id="retryB" disabled onclick="retryName()">А может не надо?</button>
+    </div>
+
+    <div id="innerPart" hidden style="text-align: center;">
+        <table>
+            <tr>
+                <th>
+                    На чьей ты стороне?<br>
+                    <button id="cats" onclick="catdogfox('cat')">Коты</button><br>
+                    <button id="dogs" onclick="catdogfox('dog')">Собаки</button><br>
+                    <button id="foxes" onclick="catdogfox('fox')">Лисы(???)</button><br>
+                </th>
+                <th>
+                    <img id="output-image" height="512">
+					<div id="output-fact"></div>
+                </th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
